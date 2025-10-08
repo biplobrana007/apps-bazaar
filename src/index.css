@@ -1,2 +1,19 @@
 @import "tailwindcss";
 @plugin "daisyui";
+
+.inter-font {
+  font-family: "Inter", sans-serif;
+}
+
+.navbar-center .active {
+  text-decoration: underline;
+  text-decoration-color: #632ee3;
+  background: -webkit-linear-gradient(#632ee3, #9f62f2);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.navbar-start .active{
+  background: -webkit-linear-gradient(#632ee3, #9f62f2);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
