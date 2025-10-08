@@ -2,6 +2,7 @@ import React from "react";
 import { FaGithub } from "react-icons/fa6";
 import { Link, NavLink } from "react-router";
 import Container from "./Container";
+import logoImg from "../assets/logo.png";
 
 const Navbar = () => {
   const links = [
@@ -42,24 +43,32 @@ const Navbar = () => {
               >
                 {links.map((link) => (
                   <li>
-                    <NavLink  to={link.linkPath}>{link.linkTitle}</NavLink>
+                    <NavLink to={link.linkPath}>{link.linkTitle}</NavLink>
                   </li>
                 ))}
               </ul>
             </div>
-            <Link
-              to="/"
-              className=" text-xl font-bold  bg-gradient-to-r text-transparent bg-clip-text from-[#632ee3] via-[#029bba] to-[#f45337]"
-            >
-              <span>apps</span>
-              <span>bazaar</span>
-            </Link>
+            <div className="flex gap-2">
+              <Link to="/">
+                <img className="w-8" src={logoImg} alt="" />
+              </Link>
+              <p className=" text-xl font-bold  bg-gradient-to-r text-transparent bg-clip-text from-[#632ee3] via-[#029bba] to-[#f45337]">
+                {" "}
+                <span>apps</span>
+                <span>bazaar</span>
+              </p>
+            </div>
           </div>
           <div className="navbar-center hidden lg:flex">
             <ul className="menu menu-horizontal px-1">
               {links.map((link) => (
                 <li>
-                  <NavLink className=" hover:text-transparent bg-clip-text hover:underline  bg-gradient-to-r from-[#632ee3] to-[#9f62f2]" to={link.linkPath}>{link.linkTitle}</NavLink>
+                  <NavLink
+                    className=" hover:text-transparent bg-clip-text hover:underline  bg-gradient-to-r from-[#632ee3] to-[#9f62f2]"
+                    to={link.linkPath}
+                  >
+                    {link.linkTitle}
+                  </NavLink>
                 </li>
               ))}
             </ul>
