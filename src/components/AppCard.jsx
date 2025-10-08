@@ -3,7 +3,6 @@ import { MdOutlineFileDownload } from "react-icons/md";
 import { TiStarFullOutline } from "react-icons/ti";
 
 const AppCard = ({ app }) => {
-  console.log(app);
   return (
     <div className="border bg-white border-gray-300 shadow rounded p-4">
       <div className="bg-gray-100 p-7 rounded-md flex justify-center">

@@ -1,8 +1,8 @@
 import React from "react";
 import AppCard from "./AppCard";
 import useApps from "../Hooks/useApps";
-import Container from "./Container";
 import { Link } from "react-router";
+import Container from "./Container";
 
 const TrendingApps = () => {
   const { apps } = useApps();
