@@ -41,18 +41,18 @@ const Navbar = () => {
                 tabIndex={0}
                 className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
               >
-                {links.map((link) => (
-                  <li>
+                {links.map((link, idx) => (
+                  <li key={idx}>
                     <NavLink to={link.linkPath}>{link.linkTitle}</NavLink>
                   </li>
                 ))}
               </ul>
             </div>
-            <div className="flex gap-2">
+            <div className=" flex gap-2 items-center">
               <Link to="/">
                 <img className="w-8" src={logoImg} alt="" />
               </Link>
-              <p className=" text-xl font-bold  bg-gradient-to-r text-transparent bg-clip-text from-[#632ee3] via-[#029bba] to-[#f45337]">
+              <p className=" max-sm:hidden text-xl font-bold  bg-gradient-to-r text-transparent bg-clip-text from-[#632ee3] via-[#029bba] to-[#f45337]">
                 {" "}
                 <span>apps</span>
                 <span>bazaar</span>
@@ -61,8 +61,8 @@ const Navbar = () => {
           </div>
           <div className="navbar-center hidden lg:flex">
             <ul className="menu menu-horizontal px-1">
-              {links.map((link) => (
-                <li>
+              {links.map((link, idx) => (
+                <li key={idx}>
                   <NavLink
                     className=" hover:text-transparent bg-clip-text hover:underline  bg-gradient-to-r from-[#632ee3] to-[#9f62f2]"
                     to={link.linkPath}

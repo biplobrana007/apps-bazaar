@@ -1,0 +1,362 @@
+[
+  {
+    "image": "https://cdn-icons-png.flaticon.com/512/732/732221.png",
+    "title": "TaskMaster",
+    "companyName": "Workify Inc.",
+    "id": 1,
+    "description": "Organize your tasks and boost productivity with reminders and smart goals.",
+    "size": 45,
+    "reviews": 2300,
+    "ratingAvg": 4.5,
+    "downloads": 120000,
+    "ratings": [
+      { "name": "1 star", "count": 120 },
+      { "name": "2 star", "count": 230 },
+      { "name": "3 star", "count": 400 },
+      { "name": "4 star", "count": 700 },
+      { "name": "5 star", "count": 850 }
+    ]
+  },
+  {
+    "image": "https://cdn-icons-png.flaticon.com/512/2965/2965567.png",
+    "title": "FitTrack",
+    "companyName": "HealthHub",
+    "id": 2,
+    "description": "Track your workouts, meals, and sleep for a healthier lifestyle.",
+    "size": 60,
+    "reviews": 3100,
+    "ratingAvg": 4.2,
+    "downloads": 250000,
+    "ratings": [
+      { "name": "1 star", "count": 180 },
+      { "name": "2 star", "count": 260 },
+      { "name": "3 star", "count": 500 },
+      { "name": "4 star", "count": 1100 },
+      { "name": "5 star", "count": 1060 }
+    ]
+  },
+  {
+    "image": "https://cdn-icons-png.flaticon.com/512/906/906343.png",
+    "title": "NoteSync",
+    "companyName": "CloudWorks",
+    "id": 3,
+    "description": "Sync your notes across devices securely and quickly.",
+    "size": 28,
+    "reviews": 1700,
+    "ratingAvg": 4.3,
+    "downloads": 98000,
+    "ratings": [
+      { "name": "1 star", "count": 90 },
+      { "name": "2 star", "count": 130 },
+      { "name": "3 star", "count": 260 },
+      { "name": "4 star", "count": 520 },
+      { "name": "5 star", "count": 700 }
+    ]
+  },
+  {
+    "image": "https://cdn-icons-png.flaticon.com/512/2920/2920324.png",
+    "title": "PhotoPro",
+    "companyName": "PixelArt Studio",
+    "id": 4,
+    "description": "Professional photo editing tools for creators.",
+    "size": 150,
+    "reviews": 5400,
+    "ratingAvg": 4.8,
+    "downloads": 540000,
+    "ratings": [
+      { "name": "1 star", "count": 140 },
+      { "name": "2 star", "count": 200 },
+      { "name": "3 star", "count": 350 },
+      { "name": "4 star", "count": 1000 },
+      { "name": "5 star", "count": 3710 }
+    ]
+  },
+  {
+    "image": "https://cdn-icons-png.flaticon.com/512/599/599502.png",
+    "title": "EduMate",
+    "companyName": "Learnify Labs",
+    "id": 5,
+    "description": "Interactive learning platform for students and teachers.",
+    "size": 95,
+    "reviews": 4400,
+    "ratingAvg": 4.6,
+    "downloads": 320000,
+    "ratings": [
+      { "name": "1 star", "count": 160 },
+      { "name": "2 star", "count": 230 },
+      { "name": "3 star", "count": 500 },
+      { "name": "4 star", "count": 1200 },
+      { "name": "5 star", "count": 2310 }
+    ]
+  },
+  {
+    "image": "https://cdn-icons-png.flaticon.com/512/891/891462.png",
+    "title": "ShopEasy",
+    "companyName": "RetailX",
+    "id": 6,
+    "description": "Online shopping made easier with smart recommendations.",
+    "size": 80,
+    "reviews": 6100,
+    "ratingAvg": 4.1,
+    "downloads": 670000,
+    "ratings": [
+      { "name": "1 star", "count": 400 },
+      { "name": "2 star", "count": 600 },
+      { "name": "3 star", "count": 1200 },
+      { "name": "4 star", "count": 2100 },
+      { "name": "5 star", "count": 1800 }
+    ]
+  },
+  {
+    "image": "https://cdn-icons-png.flaticon.com/512/553/553416.png",
+    "title": "MindEase",
+    "companyName": "Calmify",
+    "id": 7,
+    "description": "Meditation and relaxation app for stress relief.",
+    "size": 50,
+    "reviews": 2200,
+    "ratingAvg": 4.7,
+    "downloads": 190000,
+    "ratings": [
+      { "name": "1 star", "count": 100 },
+      { "name": "2 star", "count": 140 },
+      { "name": "3 star", "count": 300 },
+      { "name": "4 star", "count": 700 },
+      { "name": "5 star", "count": 960 }
+    ]
+  },
+  {
+    "image": "https://cdn-icons-png.flaticon.com/512/1828/1828884.png",
+    "title": "GameVerse",
+    "companyName": "NextPlay",
+    "id": 8,
+    "description": "Discover and play trending games from around the world.",
+    "size": 220,
+    "reviews": 8200,
+    "ratingAvg": 4.4,
+    "downloads": 1200000,
+    "ratings": [
+      { "name": "1 star", "count": 600 },
+      { "name": "2 star", "count": 800 },
+      { "name": "3 star", "count": 1400 },
+      { "name": "4 star", "count": 2200 },
+      { "name": "5 star", "count": 3200 }
+    ]
+  },
+  {
+    "image": "https://cdn-icons-png.flaticon.com/512/633/633600.png",
+    "title": "BudgetBuddy",
+    "companyName": "FinPro Systems",
+    "id": 9,
+    "description": "Smart budgeting app to manage expenses and savings.",
+    "size": 40,
+    "reviews": 2900,
+    "ratingAvg": 4.3,
+    "downloads": 210000,
+    "ratings": [
+      { "name": "1 star", "count": 150 },
+      { "name": "2 star", "count": 240 },
+      { "name": "3 star", "count": 500 },
+      { "name": "4 star", "count": 1000 },
+      { "name": "5 star", "count": 1010 }
+    ]
+  },
+  {
+    "image": "https://cdn-icons-png.flaticon.com/512/565/565547.png",
+    "title": "TravelMate",
+    "companyName": "Wanderly",
+    "id": 10,
+    "description": "Plan trips, find hotels, and explore destinations easily.",
+    "size": 110,
+    "reviews": 5100,
+    "ratingAvg": 4.6,
+    "downloads": 850000,
+    "ratings": [
+      { "name": "1 star", "count": 200 },
+      { "name": "2 star", "count": 310 },
+      { "name": "3 star", "count": 600 },
+      { "name": "4 star", "count": 1500 },
+      { "name": "5 star", "count": 2490 }
+    ]
+  },
+  {
+    "image": "https://cdn-icons-png.flaticon.com/512/706/706164.png",
+    "title": "Foodify",
+    "companyName": "EatHub",
+    "id": 11,
+    "description": "Food delivery app with real-time tracking and offers.",
+    "size": 75,
+    "reviews": 7200,
+    "ratingAvg": 4.2,
+    "downloads": 940000,
+    "ratings": [
+      { "name": "1 star", "count": 500 },
+      { "name": "2 star", "count": 800 },
+      { "name": "3 star", "count": 1300 },
+      { "name": "4 star", "count": 2000 },
+      { "name": "5 star", "count": 2600 }
+    ]
+  },
+  {
+    "image": "https://cdn-icons-png.flaticon.com/512/753/753210.png",
+    "title": "Readly",
+    "companyName": "BookNest",
+    "id": 12,
+    "description": "E-book reader with a massive online library.",
+    "size": 65,
+    "reviews": 3400,
+    "ratingAvg": 4.5,
+    "downloads": 370000,
+    "ratings": [
+      { "name": "1 star", "count": 200 },
+      { "name": "2 star", "count": 260 },
+      { "name": "3 star", "count": 500 },
+      { "name": "4 star", "count": 1100 },
+      { "name": "5 star", "count": 1340 }
+    ]
+  },
+  {
+    "image": "https://cdn-icons-png.flaticon.com/512/481/481652.png",
+    "title": "WeatherNow",
+    "companyName": "SkyCast",
+    "id": 13,
+    "description": "Accurate weather forecasts with radar and alerts.",
+    "size": 48,
+    "reviews": 4100,
+    "ratingAvg": 4.3,
+    "downloads": 430000,
+    "ratings": [
+      { "name": "1 star", "count": 220 },
+      { "name": "2 star", "count": 300 },
+      { "name": "3 star", "count": 600 },
+      { "name": "4 star", "count": 1300 },
+      { "name": "5 star", "count": 1680 }
+    ]
+  },
+  {
+    "image": "https://cdn-icons-png.flaticon.com/512/2088/2088617.png",
+    "title": "SecureVault",
+    "companyName": "DataLock Corp",
+    "id": 14,
+    "description": "Password manager and digital vault for your data.",
+    "size": 35,
+    "reviews": 2600,
+    "ratingAvg": 4.8,
+    "downloads": 150000,
+    "ratings": [
+      { "name": "1 star", "count": 100 },
+      { "name": "2 star", "count": 120 },
+      { "name": "3 star", "count": 200 },
+      { "name": "4 star", "count": 600 },
+      { "name": "5 star", "count": 1580 }
+    ]
+  },
+  {
+    "image": "https://cdn-icons-png.flaticon.com/512/727/727399.png",
+    "title": "MusicFlow",
+    "companyName": "SoundHive",
+    "id": 15,
+    "description": "Stream and download high-quality music offline.",
+    "size": 130,
+    "reviews": 8900,
+    "ratingAvg": 4.7,
+    "downloads": 2100000,
+    "ratings": [
+      { "name": "1 star", "count": 700 },
+      { "name": "2 star", "count": 800 },
+      { "name": "3 star", "count": 1200 },
+      { "name": "4 star", "count": 2500 },
+      { "name": "5 star", "count": 3700 }
+    ]
+  },
+  {
+    "image": "https://cdn-icons-png.flaticon.com/512/906/906334.png",
+    "title": "ChatWave",
+    "companyName": "SocialVerse",
+    "id": 16,
+    "description": "Fast and secure messaging with voice and video calls.",
+    "size": 105,
+    "reviews": 9800,
+    "ratingAvg": 4.4,
+    "downloads": 3500000,
+    "ratings": [
+      { "name": "1 star", "count": 800 },
+      { "name": "2 star", "count": 1100 },
+      { "name": "3 star", "count": 1600 },
+      { "name": "4 star", "count": 3000 },
+      { "name": "5 star", "count": 3300 }
+    ]
+  },
+  {
+    "image": "https://cdn-icons-png.flaticon.com/512/565/565611.png",
+    "title": "CleanDroid",
+    "companyName": "BoostTech",
+    "id": 17,
+    "description": "Optimize your Android device with one tap.",
+    "size": 25,
+    "reviews": 6200,
+    "ratingAvg": 4.1,
+    "downloads": 670000,
+    "ratings": [
+      { "name": "1 star", "count": 600 },
+      { "name": "2 star", "count": 700 },
+      { "name": "3 star", "count": 1000 },
+      { "name": "4 star", "count": 1800 },
+      { "name": "5 star", "count": 2100 }
+    ]
+  },
+  {
+    "image": "https://cdn-icons-png.flaticon.com/512/785/785116.png",
+    "title": "LangLearn",
+    "companyName": "EduVerse",
+    "id": 18,
+    "description": "Learn new languages with interactive lessons.",
+    "size": 85,
+    "reviews": 5100,
+    "ratingAvg": 4.6,
+    "downloads": 720000,
+    "ratings": [
+      { "name": "1 star", "count": 200 },
+      { "name": "2 star", "count": 300 },
+      { "name": "3 star", "count": 700 },
+      { "name": "4 star", "count": 1500 },
+      { "name": "5 star", "count": 2400 }
+    ]
+  },
+  {
+    "image": "https://cdn-icons-png.flaticon.com/512/2702/2702602.png",
+    "title": "DocuScan",
+    "companyName": "Scanify Ltd.",
+    "id": 19,
+    "description": "AI-powered document scanner and PDF converter.",
+    "size": 55,
+    "reviews": 3800,
+    "ratingAvg": 4.4,
+    "downloads": 410000,
+    "ratings": [
+      { "name": "1 star", "count": 250 },
+      { "name": "2 star", "count": 300 },
+      { "name": "3 star", "count": 600 },
+      { "name": "4 star", "count": 1100 },
+      { "name": "5 star", "count": 1550 }
+    ]
+  },
+  {
+    "image": "https://cdn-icons-png.flaticon.com/512/1869/1869047.png",
+    "title": "CryptoWatch",
+    "companyName": "FinEdge",
+    "id": 20,
+    "description": "Track cryptocurrency prices and portfolio in real-time.",
+    "size": 70,
+    "reviews": 4500,
+    "ratingAvg": 4.3,
+    "downloads": 520000,
+    "ratings": [
+      { "name": "1 star", "count": 300 },
+      { "name": "2 star", "count": 400 },
+      { "name": "3 star", "count": 700 },
+      { "name": "4 star", "count": 1400 },
+      { "name": "5 star", "count": 1700 }
+    ]
+  }
+]
