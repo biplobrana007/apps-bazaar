@@ -6,16 +6,17 @@ import AppCard from "../components/AppCard";
 const Apps = () => {
   const { apps } = useApps();
   const [inputValue, setInputValue] = useState("");
-  console.log(inputValue);
+
   const foundApps = apps.filter((app) =>
     app.title.toLowerCase().includes(inputValue.trim().toLowerCase())
   );
-  console.log(foundApps);
+
   const handleChange = (event) => {
     setInputValue(event.target.value);
   };
+
   return (
-    <div className="py-10  bg-[#f5f5f5]">
+    <div className="py-10 min-h-screen  bg-[#f5f5f5]">
       <Container>
         <div className="px-4">
           <div className="text-center font-bold mb-10">

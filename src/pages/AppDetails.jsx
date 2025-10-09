@@ -6,7 +6,6 @@ import AppDetail from "../components/AppDetail";
 const AppDetails = () => {
   const { apps } = useApps();
   const { appId } = useParams();
-  console.log(apps);
   return (
     <div>
       <div>

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Container from "./Container";
 import reviewIcon from "../assets/icon-review.png";
 import ratingIcon from "../assets/icon-ratings.png";
@@ -6,18 +6,24 @@ import downloadIcon from "../assets/icon-downloads.png";
 import {
   BarChart,
   Bar,
-  Rectangle,
   XAxis,
   YAxis,
-  CartesianGrid,
   Tooltip,
-  Legend,
   ResponsiveContainer,
 } from "recharts";
+import { updateInstalledApps } from "../utils/localStorage";
 
 const AppDetail = ({ app }) => {
+  const [installed, setInstalled] = useState(false);
+
+  console.log(installed);
+
   let data = app.ratings;
   data = [...data].reverse();
+
+  const handleInsrtallation = (id) => {
+    updateInstalledApps(id);
+  };
   return (
     <div className="py-10 bg-[#f5f5f5]">
       <Container>
@@ -70,7 +76,15 @@ const AppDetail = ({ app }) => {
                   </div>
                 </div>
               </div>
-              <button className="py-1 px-3 rounded text-white font-semibold  bg-[#00D390] w-fit">{`Install Now (${app.size} MB)`}</button>
+              <button
+                disabled={installed && true}
+                onClick={() => (
+                  handleInsrtallation(app.id), setInstalled(true)
+                )}
+                className={`py-1 px-3 cursor-pointer rounded text-white font-semibold  bg-[#00D390] w-fit`}
+              >
+                {installed ? "Installed" : `Install Now (${app.size} MB)`}
+              </button>
             </div>
           </div>
           {/* graph */}

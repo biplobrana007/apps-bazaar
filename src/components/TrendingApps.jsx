@@ -6,7 +6,6 @@ import Container from "./Container";
 
 const TrendingApps = () => {
   const { apps } = useApps();
-  console.log(apps);
   return (
     <div className="mt-15">
       <Container>
