@@ -1,10 +1,19 @@
 import React from "react";
 import { MdOutlineFileDownload } from "react-icons/md";
 import { TiStarFullOutline } from "react-icons/ti";
+import { installedAppsId } from "../utils/localStorage";
+import { ToastContainer, toast } from "react-toastify";
 
-const InstalledApp = ({ installedApp }) => {
+const InstalledApp = ({ installedApp, storedAppIds, setStoredAppIds }) => {
+  const handleUninstllBtn = (appId) => {
+    installedAppsId(appId);
+  };
+
+  const notify = () => toast("uninstalling...");
+
   return (
     <div>
+    <ToastContainer />
       <div className="flex gap-5 max-sm:flex-col max-sm:items-start border p-3 bg-white rounded border-gray-200">
         <div className="bg-[#f5f5f5] p-3 rounded">
           <img className="w-10" src={installedApp.image} alt="" />
@@ -29,10 +38,26 @@ const InstalledApp = ({ installedApp }) => {
             </div>
           </div>
           <div className="flex items-center">
-            <button className="py-1 px-3 cursor-pointer font-semibold bg-green-500 text-white rounded">Uninstall</button>
+            <button
+              onClick={() => (
+                notify(),
+                handleUninstllBtn(installedApp.id),
+                setTimeout(() => {
+                  setStoredAppIds(
+                    storedAppIds.filter((id) => id !== installedApp.id)
+                  );
+                  
+                }, 100)
+              )}
+              className="py-1 px-3 cursor-pointer font-semibold bg-green-500 text-white rounded"
+            >
+              Uninstall
+            </button>
+           
           </div>
         </div>
       </div>
+      
     </div>
   );
 };

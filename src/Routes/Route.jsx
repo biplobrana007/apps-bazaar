@@ -4,11 +4,13 @@ import Home from "../pages/Home";
 import Apps from "../pages/Apps";
 import Installation from "../pages/Installation";
 import AppDetails from "../pages/AppDetails";
+import Error from "../components/Error";
 
 export const router = createBrowserRouter([
   {
     path: "/",
     Component: Root,
+    errorElement: <Error></Error>,
     children: [
       {
         index: true,

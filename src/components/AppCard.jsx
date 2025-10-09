@@ -2,8 +2,12 @@ import React from "react";
 import { MdOutlineFileDownload } from "react-icons/md";
 import { TiStarFullOutline } from "react-icons/ti";
 import { Link } from "react-router";
+import useApps from "../Hooks/useApps";
+import LoadingSpinner from "./LoadingSpinner";
 
 const AppCard = ({ app }) => {
+  const {  loading } = useApps();
+  if (loading) return <LoadingSpinner></LoadingSpinner>;
   return (
     <Link to={`/apps/${app.id}`}>
       <div className="border bg-white border-gray-300 shadow rounded p-4">

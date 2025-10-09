@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 import Container from "../components/Container";
 import useApps from "../Hooks/useApps";
-import AppCard from "../components/AppCard";
+import LoadingSpinner from "../components/LoadingSpinner";
+import AppCards from "../components/AppCards";
 
 const Apps = () => {
-  const { apps } = useApps();
+  const { apps, loading } = useApps();
   const [inputValue, setInputValue] = useState("");
 
   const foundApps = apps.filter((app) =>
@@ -14,6 +15,8 @@ const Apps = () => {
   const handleChange = (event) => {
     setInputValue(event.target.value);
   };
+
+  if (loading) return <LoadingSpinner></LoadingSpinner>;
 
   return (
     <div className="py-10 min-h-screen  bg-[#f5f5f5]">
@@ -54,10 +57,8 @@ const Apps = () => {
               />
             </label>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
-            {foundApps.map((app) => (
-              <AppCard key={app.id} app={app}></AppCard>
-            ))}
+          <div>
+            <AppCards  foundApps={foundApps}></AppCards>
           </div>
         </div>
       </Container>

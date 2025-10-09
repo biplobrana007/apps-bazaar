@@ -2,14 +2,28 @@ import useApps from "../Hooks/useApps";
 import { loadInstalledAppsId } from "../utils/localStorage";
 import Container from "../components/Container";
 import InstalledApp from "../components/InstalledApp";
-
+import { useState } from "react";
+import LoadingSpinner from "../components/LoadingSpinner";
 
 const Installation = () => {
+  const [storedAppIds, setStoredAppIds] = useState(loadInstalledAppsId());
+  const [sortBy, setSortBy] = useState("none");
 
-  const { apps } = useApps();
-  const ids = loadInstalledAppsId();
+  const { apps, loading } = useApps();
 
-  const installedApps = apps.filter((app) => ids.includes(app.id));
+  const installedApps = apps.filter((app) => storedAppIds.includes(app.id));
+
+  const sortedApps = () => {
+    if (sortBy === "low-high") {
+      return [...installedApps].sort((a, b) => a.downloads - b.downloads);
+    } else if (sortBy === "high-low") {
+      return [...installedApps].sort((a, b) => b.downloads - a.downloads);
+    } else {
+      return installedApps;
+    }
+  };
+
+  if (loading) return <LoadingSpinner></LoadingSpinner>;
 
   return (
     <div className="py-10  bg-[#f5f5f5] min-h-screen">
@@ -22,16 +36,34 @@ const Installation = () => {
             </p>
           </div>
           <div>
-            <div>
-              <h2>App</h2>
+            <div className="max-md:flex-col-reverse max-md:items-start gap-5 flex justify-between items-center mb-5">
+              <h2 className="text-2xl font-semibold">{`(${installedApps.length}) Apps Found`}</h2>
+              <select
+                aria-placeholder="shot"
+                className="select select-bordered "
+                value={sortBy}
+                onChange={(e) => setSortBy(e.target.value)}
+              >
+                <option value="none">Sort By Time</option>
+                <option value="high-low">High-Low</option>
+                <option value="low-high">Low-High</option>
+              </select>
             </div>
-            <div className="flex flex-col gap-3">
-              {installedApps.map((installedApp) => (
-                <InstalledApp
-                  key={installedApp.id}
-                  installedApp={installedApp}
-                ></InstalledApp>
-              ))}
+            <div className={installedApps.length && "flex flex-col gap-3"}>
+              {installedApps.length ? (
+                sortedApps().map((installedApp) => (
+                  <InstalledApp
+                    key={installedApp.id}
+                    installedApp={installedApp}
+                    storedAppIds={storedAppIds}
+                    setStoredAppIds={setStoredAppIds}
+                  ></InstalledApp>
+                ))
+              ) : (
+                <h2 className="mt-10 text-3xl font-bold text-center">
+                  There is no installed apps!
+                </h2>
+              )}
             </div>
           </div>
         </div>

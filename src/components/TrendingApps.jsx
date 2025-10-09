@@ -3,9 +3,11 @@ import AppCard from "./AppCard";
 import useApps from "../Hooks/useApps";
 import { Link } from "react-router";
 import Container from "./Container";
+import LoadingSpinner from "./LoadingSpinner";
 
 const TrendingApps = () => {
-  const { apps } = useApps();
+  const { apps,loading } = useApps();
+  if(loading) return <LoadingSpinner></LoadingSpinner>
   return (
     <div className="mt-15">
       <Container>

@@ -4,7 +4,6 @@ export const loadInstalledAppsId = () => {
     return installedAppsId ? JSON.parse(installedAppsId) : [];
   } catch (err) {
     console.log(err);
-    return [];
   }
 };
 
@@ -12,12 +11,22 @@ export const updateInstalledApps = (id) => {
   const installedAppsId = loadInstalledAppsId();
   try {
     if (installedAppsId.includes(id)) {
-      alert("exist");
+      alert("Already installed....");
     } else {
-      installedAppsId.push(id);
-      localStorage.setItem("installedAppsId", JSON.stringify(installedAppsId));
+      const updateInstalledAppsId = [...installedAppsId,id] 
+      localStorage.setItem("installedAppsId", JSON.stringify(updateInstalledAppsId));
     }
   } catch (err) {
     console.log(err);
   }
 };
+
+export const installedAppsId = (appId) =>{
+    const installedAppsId = loadInstalledAppsId();
+    try{
+        const updateInstalledApps = installedAppsId.filter(id=> id !== appId  ) 
+        localStorage.setItem("installedAppsId", JSON.stringify(updateInstalledApps))
+    }catch(err){
+        console.log(err)
+    }
+}
