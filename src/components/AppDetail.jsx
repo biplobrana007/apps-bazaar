@@ -25,7 +25,7 @@ const AppDetail = ({ app }) => {
     updateInstalledApps(id);
   };
 
-  const notify = toast.success("installing.......");
+  const notify = toast.success("Success...");
   return (
     <div className="py-10 bg-[#f5f5f5]">
       <ToastContainer
