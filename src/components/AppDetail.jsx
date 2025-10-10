@@ -12,30 +12,23 @@ import {
   ResponsiveContainer,
 } from "recharts";
 import { updateInstalledApps } from "../utils/localStorage";
-import { toast, ToastContainer } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
+import { toast } from "react-toastify";
 
 const AppDetail = ({ app }) => {
-  const [installed, setInstalled] = useState(false);
 
-  let data = app.ratings;
-  data = [...data].reverse();
+  const [installed, setInstalled] = useState(false);
 
   const handleInsrtallation = (id) => {
     updateInstalledApps(id);
   };
-
+  
   const notify = toast.success("Success...");
+
+  let data = app.ratings;
+  data = [...data].reverse();
+
   return (
     <div className="py-10 bg-[#f5f5f5]">
-      <ToastContainer
-        position="top-right"
-        autoClose={700}
-        hideProgressBar={false}
-        newestOnTop={false}
-        closeOnClick
-        pauseOnHover
-      />
       <Container>
         <div className="px-4">
           {/* detail */}
@@ -89,9 +82,7 @@ const AppDetail = ({ app }) => {
               <button
                 disabled={installed && true}
                 onClick={() => (
-                  handleInsrtallation(app.id),
-                  setInstalled(true),
-                  installed && notify()
+                  handleInsrtallation(app.id), setInstalled(true), notify()
                 )}
                 className={`py-1 px-3 cursor-pointer rounded text-white font-semibold  bg-[#00D390] w-fit`}
               >

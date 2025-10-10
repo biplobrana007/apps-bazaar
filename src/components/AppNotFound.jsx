@@ -14,7 +14,7 @@ const AppNotFound = () => {
           The App you are requesting is not found on our system. please try
           another apps.
         </p>
-        <Link to="" onClick={()=> window.location.reload()} className="btn">
+        <Link to={-1} className="btn">
           Go Back
         </Link>
       </div>

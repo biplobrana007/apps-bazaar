@@ -37,7 +37,7 @@ const Installation = () => {
           </div>
           <div>
             <div className="max-md:flex-col-reverse max-md:items-start gap-5 flex justify-between items-center mb-5">
-              <h2 className="text-2xl font-semibold">{`(${installedApps.length}) Apps Found`}</h2>
+              <h2 className="text-2xl font-semibold">{`(${installedApps.length}) ${installedApps.length> 1 ? "Apps": "App"} Found`}</h2>
               <select
                 aria-placeholder="shot"
                 className="select select-bordered "
@@ -60,9 +60,12 @@ const Installation = () => {
                   ></InstalledApp>
                 ))
               ) : (
-                <h2 className="mt-10 text-3xl font-bold text-center">
-                  There is no installed apps!
-                </h2>
+                <div className="text-center">
+                  <h2 className="mt-10 text-3xl font-bold  text-gray-700">
+                    There is no installed apps!
+                  </h2>
+                  <p className="text-blue-600 mt-2 text-lg">Please, install an app first!</p>
+                </div>
               )}
             </div>
           </div>

@@ -2,18 +2,18 @@ import React from "react";
 import { MdOutlineFileDownload } from "react-icons/md";
 import { TiStarFullOutline } from "react-icons/ti";
 import { installedAppsId } from "../utils/localStorage";
-import { ToastContainer, toast } from "react-toastify";
+import {  toast } from "react-toastify";
 
 const InstalledApp = ({ installedApp, storedAppIds, setStoredAppIds }) => {
   const handleUninstllBtn = (appId) => {
     installedAppsId(appId);
   };
 
-  const notify = () => toast("uninstalling...");
+  const notify = () => toast.success("uninstalling...");
 
   return (
     <div>
-    <ToastContainer />
+
       <div className="flex gap-5 max-sm:flex-col max-sm:items-start border p-3 bg-white rounded border-gray-200">
         <div className="bg-[#f5f5f5] p-3 rounded">
           <img className="w-10" src={installedApp.image} alt="" />

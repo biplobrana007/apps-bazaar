@@ -30,7 +30,7 @@ const Apps = () => {
             </p>
           </div>
           <div className="my-4 flex justify-between items-center max-sm:flex-col-reverse gap-10 mb-7">
-            <h2 className="text-2xl font-semibold">{`(${foundApps.length}) Apps Found`}</h2>
+            <h2 className="text-2xl font-semibold">{`(${foundApps.length}) ${foundApps.length>1 ? "Apps": "App"} Found`}</h2>
             <label className="input">
               <svg
                 className="h-[1em] opacity-50"
