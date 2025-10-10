@@ -3,19 +3,21 @@ import { useParams } from "react-router";
 import useApps from "../Hooks/useApps";
 import AppDetail from "../components/AppDetail";
 import LoadingSpinner from "../components/LoadingSpinner";
+import AppNotFound from "../components/AppNotFound";
 
 const AppDetails = () => {
-  const { apps,loading } = useApps();
+  const { apps, loading } = useApps();
   const { appId } = useParams();
 
-  if(loading) return <LoadingSpinner></LoadingSpinner>
+  const app = apps.find((app) => app.id == appId);
+
+  if (loading) return <LoadingSpinner></LoadingSpinner>;
   return (
     <div>
       <div>
-        {apps.map(
-          (app) =>
-            app.id == appId && <AppDetail key={app.id} app={app}></AppDetail>
-        )}
+        {
+          app? <AppDetail  app={app}></AppDetail> : <AppNotFound></AppNotFound>
+        }
       </div>
     </div>
   );
